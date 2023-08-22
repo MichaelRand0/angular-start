@@ -4,4 +4,5 @@
     <span *ngIf="loading" class="text-3xl font-bold text-center">Loading...</span>
     <app-product *ngFor="let product of products$ | async" [product]="product" />
   </div>
+  <app-error />
 </div>

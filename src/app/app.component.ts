@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { IProduct } from './models/Product'
 import { ProductsService } from './services/products.service'
 import { Observable, tap } from 'rxjs'
+import { ErrorService } from './services/error.service'
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit {
   title = 'Angular'
   products$: Observable<IProduct[]>
   loading = true
-  constructor(private productsService: ProductsService) {}
+  constructor(private productsService: ProductsService, public ErrorService: ErrorService) {}
 
   ngOnInit(): void {
     this.products$ = this.productsService
