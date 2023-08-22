@@ -7,4 +7,5 @@ import { IProduct } from 'src/app/models/Product'
 })
 export class ProductComponent {
   @Input() product: IProduct
+  isDetailsShowed = false
 }
