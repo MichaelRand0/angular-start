@@ -10,10 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { ModalComponent } from './components/modal/modal.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
-import { FocusDirective } from './directives/focus.directive'
+import { FocusDirective } from './directives/focus.directive';
+import { StopPropagationDirective } from './directives/stop-propagation.directive'
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, ErrorComponent, SearchFilterPipe, ModalComponent, CreateProductComponent, FocusDirective],
+  declarations: [AppComponent, ProductComponent, ErrorComponent, SearchFilterPipe, ModalComponent, CreateProductComponent, FocusDirective, StopPropagationDirective],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
