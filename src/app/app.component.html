@@ -1,8 +1,9 @@
-<div class="p-10 flex flex-col items-center">
+<div class="p-10 flex flex-col items-center max-w-[720px]">
   <h1 class="text-red-600 text-2xl mb-8">{{ title | titlecase }}</h1>
-  <div class="flex flex-wrap max-w-[640px] w-full justify-center">
-    <span *ngIf="loading" class="text-3xl font-bold text-center">Loading...</span>
-    <app-product *ngFor="let product of products$ | async" [product]="product" />
+  <input [(ngModel)]="search" type="text" class="px-4 py-2 w-full border border-gray-400 rounded text-lg mb-6" placeholder="Search by title...">
+  <span *ngIf="loading" class="text-3xl font-bold text-center">Loading...</span>
+  <div *ngIf="products$ | async as products" class="flex flex-wrap w-full justify-center">
+    <app-product *ngFor="let product of products | searchFilter:search" [product]="product" />
   </div>
   <app-error />
 </div>

@@ -6,10 +6,12 @@ import { AppComponent } from './app.component'
 import { ProductComponent } from './components/product/product.component'
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './components/error/error.component'
+import { FormsModule } from '@angular/forms';
+import { SearchFilterPipe } from './pipes/search-filter.pipe'
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, ErrorComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent, ProductComponent, ErrorComponent, SearchFilterPipe],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

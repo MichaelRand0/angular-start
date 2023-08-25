@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   title = 'Angular'
   products$: Observable<IProduct[]>
   loading = true
+  search=''
   constructor(private productsService: ProductsService, public ErrorService: ErrorService) {}
 
   ngOnInit(): void {
