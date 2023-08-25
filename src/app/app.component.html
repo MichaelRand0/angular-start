@@ -6,4 +6,7 @@
     <app-product *ngFor="let product of products | searchFilter:search" [product]="product" />
   </div>
   <app-error />
+  <app-modal title="Create Product">
+    <app-create-product />
+  </app-modal>
 </div>

@@ -1,0 +1,15 @@
+<form class="w-[500px]" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input
+    appFocus
+    type="text"
+    formControlName="title"
+    class="w-full px-4 py-2 border border-gray-500 rounded text-lg"
+    placeholder="Text..."
+  />
+  <span class="text-red-600 mt-2 text-sm">{{errorMessage}}</span>
+  <input
+    type="submit"
+    class="w-full mt-3 px-6 py-2 bg-slate-600 text-white font-bold hover:bg-white border border-slate-600 hover:text-slate-600 transition"
+    value="Submit"
+   />
+</form>
