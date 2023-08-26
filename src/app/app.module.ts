@@ -11,10 +11,12 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { ModalComponent } from './components/modal/modal.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { FocusDirective } from './directives/focus.directive';
-import { StopPropagationDirective } from './directives/stop-propagation.directive'
+import { StopPropagationDirective } from './directives/stop-propagation.directive';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { ProductsListComponent } from './pages/products-list/products-list.component'
 
 @NgModule({
-  declarations: [AppComponent, ProductComponent, ErrorComponent, SearchFilterPipe, ModalComponent, CreateProductComponent, FocusDirective, StopPropagationDirective],
+  declarations: [AppComponent, ProductComponent, ErrorComponent, SearchFilterPipe, ModalComponent, CreateProductComponent, FocusDirective, StopPropagationDirective, NavigationComponent, ProductsListComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],

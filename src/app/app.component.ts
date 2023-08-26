@@ -7,15 +7,6 @@ import { ModalService } from './services/modal.service'
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent implements OnInit {
-  title = 'Angular'
-  loading = true
-  search=''
-  constructor(public productsService: ProductsService, public ErrorService: ErrorService, public modalService: ModalService) {}
+export class AppComponent {
 
-  ngOnInit(): void {
-    this.productsService
-      .getProductsAll()
-      .subscribe(() => this.loading = false)
-  }
 }
